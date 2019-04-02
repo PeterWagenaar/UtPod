@@ -123,7 +123,7 @@ void UtPod::showSongList() {
     temp = songs;
 
     while(temp!= nullptr) {
-        cout<<"Song " << counter << ": " << temp->s.getArtist() << ", " << temp->s.getTitle() << ", " << temp->s.getSize() << endl;
+        cout<<"Song " << counter << ": " << temp->s.getTitle() << ", " << temp->s.getArtist() << ", " << temp->s.getSize() << endl;
         counter++;
         temp = temp->next;
     }
