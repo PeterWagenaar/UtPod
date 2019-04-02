@@ -41,9 +41,9 @@ public:
 
      precondition: s is a valid Song
 
-     input parms -
+     input parms - artist and title cannot be blank, size cannot be 0
 
-     output parms -
+     output parms -will return success if added and a failure if there is no memory
     */
 
     int addSong(Song const &s);
@@ -56,9 +56,9 @@ public:
          o returns -1 if nothing is removed
 
 
-       input parms -
+       input parms - artist and title cannot be blank, size cannot be 0
 
-       output parms -
+       output parms - will return success if found, will return failure if it cannot be found
     */
 
     int removeSong(Song const &s);
@@ -70,7 +70,7 @@ public:
 
        input parms -
 
-       output parms -
+       output parms - will return a shuffled list of songs
     */
 
     void shuffle();
@@ -82,7 +82,7 @@ public:
 
        input parms -
 
-       output parms -
+       output parms - will return a list of songs from head to the tail
     */
 
     void showSongList();
@@ -94,7 +94,7 @@ public:
 
        input parms -
 
-       output parms -
+       output parms - will sort a list of songs from greatest to least
     */
 
     void sortSongList();
@@ -105,7 +105,7 @@ public:
 
        input parms -
 
-       output parms -
+       output parms - will clear all the memory
     */
     void clearMemory();
 
@@ -116,7 +116,7 @@ public:
 
        input parms -
 
-       output parms -
+       output parms - will return the max memory size of the pod
     */
 
     int getTotalMemory(){
@@ -137,7 +137,23 @@ public:
 
     int getRemainingMemory();
 
+    /* FUNCTION - int numSongs
+     *  returns the amount of songs in the list
+
+       input parms -
+
+       output parms - number of songs in the list
+    */
+
     int numSongs();
+
+    /* FUNCTION - ~UtPod
+     *  destructs the object
+
+       input parms -
+
+       output parms -
+    */
 
     ~UtPod();
 

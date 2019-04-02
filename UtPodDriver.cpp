@@ -18,7 +18,9 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    cout << "Made a pod with standard memory!" << endl;
     UtPod t;
+    cout << "Made a pod with 256MB of memory!" << endl;
     UtPod p(256);
 
     Song s1("Beatles", "Hey Jude1", 4);
@@ -81,6 +83,12 @@ int main(int argc, char *argv[])
     result = t.removeSong(s3);
     cout << "delete result = " << result << endl;
 
+    result = t.removeSong(s3);
+    cout << "delete result = " << result << endl;
+
+    result = t.removeSong(s3);
+    cout << "delete result = " << result << endl;
+
     t.showSongList();
 
     result = t.removeSong(s1);
@@ -108,18 +116,39 @@ int main(int argc, char *argv[])
     t.showSongList();
     cout << "memory = " << t.getRemainingMemory() << endl;
 
-    result = t.addSong(s8);
+    result = p.addSong(s8);
     cout << "add result = " << result << endl;
 
-    result = t.addSong(s1);
+    result = p.addSong(s1);
     cout << "add result = " << result << endl;
 
-    result = t.addSong(s6);
+    result = p.addSong(s6);
+    cout << "add result = " << result << endl;
+
+    result = p.addSong(s9);
     cout << "add result = " << result << endl;
 
     p.showSongList();
+
+    cout << "Shuffling..." << endl;
+
+    p.shuffle();
+
+    cout << "Shuffled!" << endl;
+
+    p.showSongList();
+
+    cout << "Sorting..." << endl;
+
+    p.sortSongList();
+
+    cout << "Sorted!" << endl;
+
+    p.showSongList();
+
     p.clearMemory();
 
     cout << "Cleared! " << endl;
     p.showSongList();
+    cout<< "Very Empty!" << endl;
 }
